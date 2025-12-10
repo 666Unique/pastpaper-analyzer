@@ -80,6 +80,3 @@ Context: ...binary search algorithm works by... ...
 - Handles PDFs with text content; may not work on heavily imaged/scanned documents.
 - Supports ASCII-compatible encoding for display.
 
-## Related
-
-- `downloader.py`: Tool for downloading the past papers (https://github.com/[username]/pastpaper-downloader)
