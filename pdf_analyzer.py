@@ -6,7 +6,8 @@ import re
 download_dir = "downloads"
 
 def extract_text_from_pdf(pdf_path):
-    """Extract text from a PDF file using pdfplumber."""
+    """Extract text from a PDF file using pdfplumber.
+    https://pypi.org/project/pdfplumber/"""
     text = ""
     try:
         with pdfplumber.open(pdf_path) as pdf:
@@ -26,7 +27,7 @@ def find_keyword_context(text, keywords):
     for keyword in keywords:
         pos = 0
         occurrences = 0
-        while pos < len(text) and occurrences < 5:  # limit per file per keyword
+        while pos < len(text) and occurrences < 5:  # limit per file per keyword to filter out noise
             pos = lower_text.find(keyword, pos)
             if pos == -1:
                 break
